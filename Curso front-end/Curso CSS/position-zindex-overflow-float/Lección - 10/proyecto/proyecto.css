@@ -1,0 +1,35 @@
+h1{
+    text-align: center;
+    color: rebeccapurple;
+    font-size: 25px;
+}
+
+.divmayor{
+    position: relative;                          /*SIEMPRE EL DIV PADRE DEBE SER RELATIVE                */
+    border: 4px double greenyellow;           /*AQUI SE ACOMODAN LOS VALORES, TAMAÑO, POSICIÓN Y BORDE */
+    text-align: center;                      
+    margin: auto;
+    width: 40%
+}
+
+img{
+    width: 100%;
+    opacity: 50%;                                /* SE EDITA LA IMAGEN, QUE OCUPE EL 100% DEL DIV Y OPACIDAD  
+                                                    Y QUE QUEDE DEBAJO DEL TEXTO  */
+    z-index: -1;
+
+}
+
+
+
+.divmenor{
+    position: absolute;                    /* SIEMPRE EL DIV HIJO DEBE SER ABSOLUTE           */
+    text-align: center;
+                                           /* SE AJUSTAN VALORES Y                            */
+
+    top: 50%;                              /* top: 50%;  como está dentro del div, alto se ajusta a la mitad del div*/
+    left: 40%;                             /* left: 40%; como está dentro del div padre, ancho ajusta a la mitad    */
+
+    color: green;
+    font-size: 24px;
+}

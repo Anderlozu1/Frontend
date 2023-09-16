@@ -1,0 +1,255 @@
+
+/*    <span>                            se puede modificar los estilos y colores pero no el margin, padding, height
+
+    max-width: 50%;                   USA UN MÁXIMO DE 50% DE LA PANTALLA Y NO PUEDE SER MENOR A 50%
+
+      position: static;                 Se queda quieto y no se le pueden cambiar los valores, excepto decoración
+
+              relative;                 usa top, left, right y bottom, CAMBIANDO VALORES, es de tipo bloque
+                                        y va a tener su línea, no se va a amontonar. Usa en el div padre
+
+                 fixed;                 se acomoda desde el tamaño de la pantalla, usa las 4 posiciones
+                                        no respeta los espacios de las etiquetas, se superpone y usa como header
+                                        se mantiene fija en la parte asignada a pesar de que se mueva la pagina, 
+                                        tiene que tener un padding-bottom: grande;
+               
+               absolute;                se tiene en cuenta desde otro elemento, excepto static, se acomoda desde este
+                                        por ejemplo cuando un div entre otro div,       se usa en el hijo
+                                        
+               sticky;                  lo mismo que fixed
+
+    z-index: 1, 2, 3;                   superponer los objetos en orden numérico    mientras más grande se superpone más
+    z.index: -1, -2, -3;                lo contrario de superponer                       128, 130 Y 131
+    
+PARA QUE SE USE OVERFLOW, EL DIV TIENE QUE TENER SIEMPRE UN HEIGHT
+
+    overflow: visibility;               se ve fuera del div
+                  hidden;               oculto
+                  scroll;               scroll en x - y
+                  auto;                 se muestre solo las barras necesarias
+
+    overflow-x: cualquiera              se use solo en x o y
+
+FLOAT SIRVE PARA PONER ELEMENTOS ENCIMA O AL LADO DE OTROS, SIN IMPORTAR NADA
+
+    float: left, right, both;            Elementos flotados en la posición izquierda, derecha y centro
+
+    clear: left, right, both;            El espacio vacio, se va a ocupar y no se van a poner ahí los elementos.
+                                         Elementos limpiados en la izquierda, derecha y centro. 
+    
+INLINE-BLOCK   modificar el span para que se pueda cambiar los tamaños 
+
+    display: inline-block;               modifica para que se use en un SPAN el height, width, etc                              
+*/
+
+                 
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;  
+}
+
+h1{
+    text-align: center;
+    text-decoration: overline;
+    text-transform: uppercase;
+    color: #f34d32;
+    background-color: gray;
+    padding: 6px;
+    margin: 20px auto;
+    border: 6px double #f34d32;
+    text-shadow: 3px 3px 6px blueviolet; 
+    font-size: 2em;
+    font-style:italic;
+    font-weight: 400;
+    font-family: 'Times New Roman';
+}
+
+div{
+    margin: 15px;
+}
+
+.static{
+    position: static;                      /*NO CAMBIA LA POSICIÓN NUNCA   */
+
+
+    border: 6px groove #f35d35;
+    background-color: rgba(175, 167, 167, 0.829);
+    padding: 10px;
+   
+}
+
+.relative{
+    position: relative;                    /*CAMBIA CUANDO SE LE IMPLEMENTAN VALORES FIJOS, SE PUEDE SUPERPONER
+    top: 50px;
+    right: 100px;                                                                                             */
+    
+
+    border: 6px groove #f35d35;
+    background-color: rgba(175, 167, 167, 0.829);
+    padding: 10px;
+}
+
+.fixed{
+position: fixed;                           /*EMPIEZA DESDE LA PARTE IZQUIERDA ARRIBA Y SE POSICIONA CON RESPECTO
+                                             AL TAMAÑO DE LA PANTALLA, SI SE BAJA LA PANTALLA SE MUEVE CON EL SCROLL*/
+
+    border: 6px groove #f35d35;
+    background-color: rgba(175, 167, 167, 0.829);        /*        HEADER         */
+    padding: 10px;
+    margin: 10px;
+}
+
+
+
+/* absolute                           MUY IMPORTANTE                                  */
+
+.absolute-mayor{
+    position: relative;     /* SE TIENE QUE CAMBIAR EL POSITION A RELATIVE O ABSOLUTE AL DIV PADRE                */
+
+                            /* El absolute-padre es más grande, y el hijo esta dentro de este. 
+
+                            Se ajusta los valores y después se pone dentro el div hijo con sus ubicaciones
+                            y características ABSOLUTE*/
+    width: 350px;
+    height: 200px;
+    margin: 95px 250px;
+    border: 6px groove violet;
+    padding: 10px;
+}
+
+.absolute-menor{
+    position: absolute;
+    left: 65px;                               /* Se ajusta el tamaño del div hijo y su ubicación dentro del padre*/
+    bottom: 15px;
+
+    border: 3px yellowgreen inset;
+    background-color: antiquewhite;
+}
+
+
+.sticky{
+    position: sticky;
+    position: -webkit-sticky;           /* HEADER: CUANDO SE BAJA LA PANTALLA SE SIGUE MOSTRANDO EN LA MISMA POSICIÓN*/
+
+    top: 10px;
+    left: 45px;                               
+    border: #a538 solid 5px;
+}
+
+
+/*   Z-INDEX             LOS ELEMENTOS SE PUEDAN SUPERPONER  */
+
+
+div.estatico{
+    padding: 15px;
+    top: 10px;
+    border: 4px double greenyellow;
+}
+
+div.relativo{
+    z-index: 1;                       /* PARA QUE SE SUPERPONGA: 1, 2, 3  PARA QUE LO SUPERPONGAN: -1, -2, -3    */
+
+    position: relative;
+    top: -40px;                       /*PARA QUE SE PEGUEN LOS DOS OBJETOS*/
+    left: 18px;
+    border: 5px double orange;
+    background-color: gainsboro;
+    padding: 15px;
+
+}
+
+div.absoluto{
+    z-index: -1;
+    padding: 5px;
+    bottom: 0px;
+    left:  0px;
+    border: yellow solid 5px;
+    background-color: lightyellow;
+}
+
+
+/* OVERFLOW           EL TEXTO FUERA DE UN BORDE, SE MODIFIQUE Y SE USE COMO UN SCROLL PARA QUE NO SE SALGA DEL BORDE
+                      - SIEMPRE TIENE QUE TENER UN HEIGHT*/
+
+.contenedor{
+    border: 3px dashed greenyellow;
+    width: 30%;
+    height: 150px;
+    margin: auto;
+
+    overflow: auto;
+}
+
+
+/* FLOAT           QUE FLOTEN ELEMENTOS: DERECHA IZQUIERDA Y CENTRO SIN IMPORTAR QUE SEAN BLOCK O NO */
+
+
+.contenedores{
+    padding: 10px;
+    width: 25%;
+    font-size: 19px;                   /*  decoración de todos los contenedores  */
+    margin: 0px;
+}
+
+.contenedores.contenedor1{                    /* contenedor uno, flotar izquierda y cambio borde*/
+    float: left;
+    border: 4px double lightgreen;
+}
+
+.contenedores.contenedor2{                    /* contenedor dos, flotar derecha y cambio borde*/
+    float: right;
+    border: 4px double lightcoral;
+}
+
+.contenedores.contenedor3{                    /* contenedor tres, flotar al centro y cambio borde*/
+    margin: auto;                             
+    clear: both;                              /* margin: auto; valla al centro. 
+                                                 clear:both; use los espacios vacios para que use si o si otra linea*/
+               
+    border: 4px double lightseagreen;
+}
+
+
+/*  Display: inline-block         ELEMENTOS SE PUEDAN MODIFICAR CON ESTILOS Y TAMAÑOS JUNTOS*/
+
+
+.display{
+    border: 7px double green;
+    padding: 5px;
+    width: 70%;
+    height: 10%;
+    overflow: auto;
+}
+
+span{
+    display: inline-block;
+
+    height: 59px;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    border: solid 1px rgb(70, 70, 185);
+    padding: 4px;
+    margin: 2px 4px;
+}
+
+.menu{
+    list-style-type: none;                 /*Para que no aparezca decoración*/
+    text-align: center;
+}
+
+li{
+    display: inline-block;       /* Los elementos van a ocupar una linea, tienen su decoración y margen, padding y 
+                                    tamaño de width para que se usen en cada uno, usando como un menú de inicio*/
+    padding: 4px;
+    margin: 40px;
+    width: 10%;
+
+
+    text-decoration: none;
+    color: white;
+    background-color: crimson;
+    border: 4px black solid;
+    border-radius: 6px;
+}

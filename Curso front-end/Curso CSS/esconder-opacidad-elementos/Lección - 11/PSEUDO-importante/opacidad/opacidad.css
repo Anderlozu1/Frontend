@@ -1,0 +1,23 @@
+div.contenedor p{
+    text-align: center;
+    color: blue;
+    font-size: 20px;
+}
+
+div.contenedor{
+    border: green 5px double;
+    width: 65%;                         /* Se ajusta el tamaño del div */
+    margin: auto;
+    margin: 0 auto;
+}
+
+div.contenedor img{
+    opacity: 50%;
+                                        /* Se ajusta el tamaño y la OPACIDAD NORMAL DEL DIV */
+    width: 90%;
+    margin: 0px 40px;
+}
+
+.contenedor img:hover{
+    opacity: 100%;                      /* Se ajusta la OPACIDAD CUANDO EL MOUSE ESTA SOBRE ESTE*/
+}

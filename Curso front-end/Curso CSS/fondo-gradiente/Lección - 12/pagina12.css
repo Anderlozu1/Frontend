@@ -1,0 +1,103 @@
+html{
+    height: auto;                /* PONERLO SIEMPRE */
+    min-height: 100%;
+}
+
+body{
+    /* EMPIEZA CON EL CAFÉ Y TERMINA CON EL MORADO CON EL DEGRADADO HACIA ABAJO  
+
+     background: linear-gradient(#f7b585, #3a0ca3) ;  */
+
+    /* LO MISMO PERO DE DERECHA A IZQUIERDA 
+    
+    background: linear-gradient(to right, #f7b585, #3a0ca3);  */
+
+    /* DE ARRIBA HACIA ABAJO EN EL ORDEN: AZUL, VERDE Y AMARILLO
+
+    background: linear-gradient(blue, green, yellow) */
+
+    /* DE ESQUINA SUPERIOR IZQUIERDA A ESQUINA INFERIOR DERECHA 
+
+    background: linear-gradient(to bottom right, lightpink, darkgreen);   */
+
+    /* SE PUEDE AJUSTAR EL ÁNGULO CON LOS GRADOS 
+    
+    background: linear-gradient(90deg, lightpink, green);      deg = grados     */
+
+    /* SE AJUSTA DESDE EL CENTRO FORMANDO UN CIRCULO AZUL Y SE VA DEGRADANDO A LOS EXTREMOS EN GRIS */
+    
+    background: radial-gradient(circle, rgb(2, 86, 2), rgba(129, 226, 178, 0.532));
+}
+
+div.contenedor{
+    box-shadow: 2px      2px      2px            20px red; 
+    /*     Ejes: x        y     difuminado    propagación de la sombra                 */
+    
+
+    margin: auto;
+    text-align: center;
+    border: 5px solid lightgreen;
+    width: 60%;
+    border-radius: 10px;
+}
+
+div.imagen{
+    background-color: darkgreen;
+    border-radius: 5px;
+}
+
+div.parrafo{
+    padding-top: 6px;
+    font-size: 1.8em;
+    font-weight: bolder;
+    text-shadow: 3px 2px 5px black;
+    color: red;
+}
+
+
+h1{
+    background-color: crimson;
+    color: white;
+    padding: 8px;
+    border: red solid 5px;
+    margin:  30px auto;
+    outline: 5px gray groove;
+    text-align: center;
+    text-shadow: 4px 4px 3px black;
+    letter-spacing: 4px;
+
+    width: 70%;
+
+    font-size: 30px;
+    font-family: -apple-system;
+    font-weight: 500;
+    font-style: italic;
+}
+
+h3{
+    width: 70%;
+    background-color: #606c38;
+    color: white;
+    padding: 10px;
+    border: 4px double #344e41;
+    margin: 25px auto;
+    outline: 3px double white;
+
+    text-align: center;
+    text-decoration: overline;
+    text-shadow: 3px 3px 6px white;
+    
+    font-size: 20px;
+    font-family: Georgia;
+    font-weight: bolder;
+    font-style: italic;
+    font-variant: small-caps;
+
+    letter-spacing: 4px;
+}
+
+div.contenedor img{
+    width: 95%;
+    
+}
+

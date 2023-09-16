@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar textos en CSS</title>
+    <link rel="stylesheet" href="/Curso CSS/Lección - 10/pagina10.css">
+</head>
+
+
+<body>
+
+<!--   CENTRAR DIVS     -->
+
+    <h1> Centrar elementos de tipo div</h1>
+
+
+    <!--             --------- FIXED STICKY: HEADER    -     RELATIVE ABSOLUTE: SUPERPONER ---------           -->
+
+
+<!-- STATIC                 QUIETO-->
+
+    <div class="static">Elemento ubicación tipo static</div> <!-- SE QUEDA QUIETO Y NO SE PUEDE MODIFICAR -->
+    
+<!-- RELATIVE  -->                      <!-- SE USA EN LOS DIVS PADRES-->
+
+    <div class="relative">Elemento ubicación tipo relative</div> <!-- SE USA TOP, BOTTOM, RIGHT, LEFT
+                                                                  SE PONE UN VALOR FIJO QUE SE VA A SUPERPONER-->
+<!--  FIXED                   HEADER -->
+
+    <div class="fixed">Elemento ubicación tipo fixed</div>    <!-- SE USA TOP, BOTTOM, RIGHT, LEFT
+                                                                  EMPIEZA DESDE LA PARTE SUPERIOR IZQUIERDA Y SE ACOMODA-->
+    
+<!-- ABSOLUTE     -->                      <!-- SE USA EN LOS DIVS HIJOS-->
+
+    <div class="absolute-mayor">
+        Elemento ubicación tipo padre-absolute 
+                                                              <!-- VA A QUEDAR ESTÁTICO ASÍ SE MUEVA LA PAGINA-->
+        <div class="absolute-menor">Elemento hijo-absolute</div>
+
+    </div>
+
+<!--  STICKY                   HEADER -->
+  
+    <div class="sticky">
+        Elemento ubicación tipo sticky      <!-- HEADER, SE MUESTRA EN LA MISMA POSICIÓN ASI SE BAJE LA PANTALLA-->
+    </div>
+
+
+<!-- Z-INDEX                   ACOMODAR Y SUPERPONER ETIQUETAS                                                    -->
+    
+<h1> Propiedad z-index </h1>
+
+
+    <div class="estatico"> div estatico con static</div>
+
+  
+    <div class="relativo">div relativo con relative <!-- COMO VALOR 1 SE VA A SUPERPONER SOBRE EL DIV STATIC-->
+         <div class="absoluto">
+             div absoluto
+         </div>
+
+    </div>
+
+<!--   OVERFLOW -          Escritos aparezcan sobre un  div y utilize un scroll para acomodarlo-->
+
+<h1> Propiedad Overflow </h1>
+
+
+    <div class="contenedor">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+
+<!--  PROPIEDAD FLOAT      Poner elementos en un sector de la pagina, puede estar en una misma línea asi sean block-->
+
+<h1> Propiedad Float en CSS</h1>
+
+
+    <div class="contenedores contenedor1"> Este es un elemento float hacia la izquierda</div>
+
+    <div class="contenedores contenedor2"> Este es un elemento float hacia la derecha</div>
+
+    <div class="contenedores contenedor3"> Este es un elemento float hacia el centro</div>
+
+
+<!-- DISPLAY: INLINE-BLOCK      se modifique tamaños y estilos de un objeto,      SE USA PARA HEADERS Y NAVS  -->
+
+<h1> Propiedad display: inline-block</h1>
+
+
+<ul class="menu">
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#">Servicios</a></li>
+    <li><a href="#">Menu</a></li>
+</ul>
+
+
+<div class="display"> <span> Span con la propiedad display: inline-block;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</div>
+
+
+</body>

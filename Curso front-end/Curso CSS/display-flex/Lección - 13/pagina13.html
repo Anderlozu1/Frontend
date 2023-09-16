@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox en CSS</title>
+    <link rel="stylesheet" href="/Curso CSS/Lección - 13/pagina13.css">
+</head>
+
+
+<body>
+
+
+    <!--  Flexbox:    ACOMODAR DE MANERA FACIL LOS ELEMENTOS DENTRO DE UN DIV  -->
+
+
+    <h1> Flexbox en CSS</h1>
+
+
+    <!-- order 1:    Sigue el orden donde se muestren las cosas
+        flex-grow:   Hace que ocupe un mayor espacio que los otros elementos, se ajusta al tamaño de la ventana
+        flex-basis:  Lo mismo que flex-grow pero el TAMAÑO NO CAMBIA a pesar de TODO
+        align-self:  CAMBIAR SOLO UN ELEMENTO-->
+
+
+    <div class="contenedor">
+        <p style="order: 1"> Boton 1</p>
+        <p style="flex-basis: 250px;"> Boton 2</p>
+        <p style="flex-grow: 4;"> Boton 3</p>
+    </div>
+
+
+
+</body>

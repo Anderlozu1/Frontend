@@ -1,0 +1,77 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    background-color: darkolivegreen;
+    color: white;
+    padding: 6px;
+    border: rgb(2, 88, 2) 4px solid;
+    letter-spacing: 4px;
+    font-size: 23px;
+    font-style: italic;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    width: 100%;
+    text-shadow: 4px 3px 5px white;
+
+}
+
+h2{
+    background-color: lightcoral;
+    color: black;
+    padding: 10px;
+    border: red double 6px;
+    margin: auto;
+    width: 80%;
+    font-size: 25px;
+    font-weight: 900;
+    font-style: italic;
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+}
+
+div.contenedor{
+    width: 80%;
+    height: 20%;
+    margin: auto;
+    border: 3px solid #a8da;
+    padding: 15px;
+    color: rgb(34, 34, 172);
+}
+
+
+/* SELECTORES: DIRIGIRSE A ELEMENTOS HTML MÁS RAPIDO Y FACIL
+
+
+/*  SELECTOR DESCENDIENTE       */
+
+
+div.contenedor.descendiente p{      /*Por más profundo que este el p y este dentro de elementosva a interactuar*/
+    background-color: #fdffb6;
+}
+
+
+/*  SELECTOR CHILD              */
+
+
+div.contenedor.child > p{          /*Solo se va a seleccionar si no está dentro de una etiqueta demás, eje: otro div*/
+    background-color:rgba(2, 88, 2, .3); 
+}
+
+
+/*  SELECTOR SIBLING             */
+
+div.contenedor.adyacente + p{      /* Solo aplica al elemento p que sigue después del div seleccionado*/
+    background-color: rgba(83, 120, 232, .3);
+}
+
+div.contenedor.hermano ~ p{           /*  Aplica para todos los elementos p, después del div */
+    background-color: lightsalmon;
+}
+

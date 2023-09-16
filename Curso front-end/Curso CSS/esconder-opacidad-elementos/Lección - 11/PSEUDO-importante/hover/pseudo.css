@@ -1,0 +1,68 @@
+h1{
+    background-color: lightcoral;
+    color: black;
+    padding: 10px;
+    border: red double 6px;
+    margin: auto;
+    width: 80%;
+    font-size: 25px;
+    font-weight: 900;
+    font-style: italic;
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+}
+
+/*   div.contenedor:first-child p{}        SE REFIERE A EL PRIMER ELEMENTO P QUE ESTE DENTRO DEL DIV,
+                                           solo a el se va a poder editar                             */                   
+
+
+/*   1.      CREAR EL CONTENEDOR NORMAL             */
+
+div.contenedor{
+    width: 30%;
+    height: 70%;
+    margin: 20px auto;                     /* primero se crea el contenedor principal */
+    border: 3px solid #a8da;
+    padding: 15px;
+    color: rgb(34, 34, 172);
+}
+
+
+/*   2.    SE MUESTRA EL SEGUNDO PARRAFO CUANDO ESTA ENCIMA EL MOUSE               */
+
+
+div.contenedor:hover p{          
+    display: block;                  /* Cuando este el mouse sobre el elemento SE VA A MOSTRAR EL PARRAFO                            */
+}
+
+
+
+
+/*   3.     SE CAMBIA DE TAMAÑO, FONDO Y COLOR CUANDO SE PASA POR ENCIMA  */
+
+
+div.contenedor:hover{                /* los ":" sirve para añadir una actividad sobre el objeto */
+    background-color: lightblue;
+    color: #f1f4bd;                /* Se cambia estilos del contenedor con :hover   CUANDO EL MOUSE ESTE ENCIMA */
+    text-align: center;
+}
+
+
+/*   4.    OCULTAR EL SEGUNDO PÁRRAFO              */
+
+
+/* ocultar el segundo parrafo, no se coloca hover ya que al pasar el mouse se ocultaria y no pasaria nada*/
+
+div.contenedor p{  
+    display: none;                         /* display: none;          OCULTAR EL PARRAFO     */
+}
+
+
+
+/*                -----      PSEUDO ELEMENTOS       -----                            */
+
+
+div.contenedor p::selection {
+    background-color: yellow;
+    color: red;
+}

@@ -1,0 +1,82 @@
+
+/*   display: flex;                    Colocarlo siempre,    PODER UBICAR LOS OBJETOS DE UNA MANERA CORRECTA 
+
+     flex-direction: column;           Ajustar la dirección de los objetos,     En columnas
+             column-inverse;           Ajustar en columnas pero de manera inversa, ultimos valores muestre primero
+                        row;           Ajustar de manera HORIZONTAL
+                row-reverse;           Ajustar de manera HORIZONTAL INVERSA
+
+     flex-wrap:      nowrap;           No se muestren los cambios del div mayor sobre los elementos que queden
+                                       fuera de la pantalla
+                       wrap;           Los elementos que queden afuera pasan a otra línea con los cambios del div mayor
+
+PARA QUE EL FLEX-DIRECTION Y FLEX-WRAP QUEDEN EN UNA SOLA LÍNEA SE USA:
+   
+     flex-flow: column wrap;
+
+SE ALINEA HORIZONTALMENTE todos los elementos si es ROW,  ALINEA VERTICAL si es COLUMN
+
+     justify-content: center;           Vallan al centro                                centro
+                    flex-end;           Hacia la DERECHA(row) - abajo(column)           derecha  
+               space-between;           Vallan a los extremos y se vallan acomodando,   extremos sin espacios
+                space-around;           Se deja espacio alrededor de cada elemento,     extremos con espacios 
+                space-evenly;           El ESPACIO entre cada uno SEA EL MISMO,         espacios mismo tamaño
+
+ALINEAR DE MANERA HORIZONTAL,        en una sola linea, como si fuese bloque
+
+        align-items:  center;           Alinear elementos al centro
+                  flex-start;           Parte superior
+                   flex-end;            Parte inferior
+                      strech;           Se estira hasta la parte inferior del div lo máximo posible
+                    baseline;           Se alinea de acuerdo al contenido en cada uno PARA QUE QUEDEN RECTOS
+
+ALINEAR DE MANERA VERTICAL
+
+   align-content: flex-start;           Se posiciona HACIA ARRIBA  
+                    flex-end;                        HACIA ABAJO
+                space-around;           ESPACIO DE FORMA VERTICAL
+                space-between;          Se van a los extremos y SE FORMA UN ESPACIO
+*/
+
+
+div.contenedor{
+    display: flex;
+    background-color: dodgerblue;
+    height: 300px;
+
+    justify-content: space-around;                /*Para que todos los elementos de este se centren */
+    align-items: center;
+    align-content: center;
+}
+
+div.contenedor > p{
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    background-color: darkmagenta;
+    color: #f1faee;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1.5em;
+}
+
+h1{
+    background-color: blueviolet;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    border: 5px solid rgb(100, 0, 100);
+    box-shadow: 3px 3px 5px 4px gray;
+    text-shadow: 3px 3px 5px black;
+    margin: 20px auto;
+    width: 50%;
+    outline: 3px double black;
+    
+    font-size: 35px;
+    font-family: Verdana;
+    font-style: italic;
+    font-weight: 300;
+    font-variant: small-caps;
+    text-decoration: line-through
+}

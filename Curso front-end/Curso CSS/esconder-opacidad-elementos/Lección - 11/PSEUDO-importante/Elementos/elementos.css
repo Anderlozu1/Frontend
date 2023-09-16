@@ -1,0 +1,61 @@
+h1{
+    color: black;
+    background-color: lightpink;
+    padding: 10px;
+    border: 10px groove palevioletred;
+    border-radius: 10px;
+    margin: 40px auto;
+    text-align: center;
+    text-shadow: 3px 3px 4px rgb(37, 36, 36);
+    font-size: 25px;
+    font-family: monospace;
+    font-weight: 700;
+}
+
+div.contenedor{
+    color: black;
+    background-color: lightblue;
+    padding: 3px;
+    border: 6px double blue;
+    border-radius: 10px;
+    margin: 40px auto;
+    text-align: center;
+    text-shadow: 3px 3px 4px rgb(37, 36, 36);
+    font-size: 14px;
+    font-family: Verdana;
+    font-weight: 200;
+    width: 30%;
+}
+
+
+
+/*Primero se coloca el elemento, después los  ::contenido   */
+
+                                /* selection  */
+div.contenedor p::selection{   /*Al darle doble click cambian de color, solo aplica a los p que hay dentro del div */
+    background-color: red;
+    color: white;
+}
+
+
+div.contenedor p::first-line{     /* first-line = Se aplica al PRIMER RENGLON del párrafo */
+    font-variant: small-caps;
+    background: gray;
+}
+
+
+div.contenedor p::first-letter{    /* first-letter = Se aplica a la PRIMERA LETRA de cada párrafo  */
+    color: red;
+    font-size: 1.6em;
+}
+
+
+div.contenedor p::before{      /* before = SE MUESTRA AL INICIO del párrafo  */
+    content:"- ";             /* content:"";   =    lo que se escriba se agrega contenido ANTES DEL PARRAFO  */
+}
+
+
+div.contenedor p::after{      /* after = se MUESTRA DESPUÉS AL FINAL del parrafo */
+    content:" -";
+    content: url(/link-de-la-imagen)       /* content: url() =   agregar una imagen después del parrafo  */
+}
